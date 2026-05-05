@@ -7,70 +7,100 @@
   <style>
     :root {
       --red: #d71919;
+      --deep-red: #8f0f0f;
       --yellow: #f6c400;
       --black: #070707;
       --cream: #f5f1e7;
+      --gray: #202020;
     }
 
+    * { margin:0; padding:0; box-sizing:border-box; }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       background: var(--black);
       color: var(--cream);
+      overflow-x: hidden;
     }
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px;
-      background: #111;
+      position: fixed;
+      top:0; left:0; right:0;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 7vw;
+      background: rgba(0,0,0,0.8);
+      z-index:100;
     }
 
     .logo-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display:flex; align-items:center; gap:12px;
     }
 
     .logo-brand img {
-      width: 48px;
-      height: 48px;
+      width:48px; height:48px;
+    }
+
+    nav a {
+      margin-left:20px;
+      text-decoration:none;
+      color:var(--cream);
+      font-weight:bold;
     }
 
     .hero {
-      padding: 100px 20px;
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      padding:120px 7vw;
     }
 
-    .hero h1 {
-      font-size: 42px;
+    h1 {
+      font-size:60px;
+      text-transform:uppercase;
+      line-height:1;
     }
 
-    .yellow {
-      color: var(--yellow);
-    }
+    .yellow { color: var(--yellow); }
+
+    .hero p { margin-top:20px; font-size:18px; }
 
     .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      background: var(--yellow);
-      color: black;
-      text-decoration: none;
-      margin-right: 10px;
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 20px;
+      background:var(--yellow);
+      color:black;
+      text-decoration:none;
+      font-weight:bold;
     }
 
-    .section {
-      padding: 60px 20px;
+    .door-card {
+      position:relative;
+    }
+
+    .door-card img {
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .section { padding:80px 7vw; }
+
+    .gallery {
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
     }
 
     .gallery img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
+      width:100%;
+      height:250px;
+      object-fit:cover;
     }
 
-    .service-card {
-      margin-bottom: 20px;
-    }
+    .service-card { margin-bottom:20px; }
+
   </style>
 </head>
 <body>
@@ -80,82 +110,53 @@
     <img src="accesspro-logo.png" />
     <span>ACCESSPRO SOLUTIONS</span>
   </div>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Quote</a>
+  </nav>
 </header>
 
 <section class="hero">
-  <h1>
-    Custom Garage Doors
-    <span class="yellow">Built To Stand Out.</span>
-  </h1>
-
-  <p>
-    Custom garage doors, gates, openers, and access solutions built for durability,
-    security, and a clean high-end look. Serving the Central Valley.
-  </p>
-
   <div>
-    <a href="#contact" class="btn">Get a Free Quote</a>
-    <a href="tel:+12095551234" class="btn">Call Now</a>
+    <h1>Bull Strong.<br><span class="yellow">Built Custom.</span></h1>
+    <p>Custom doors, gates, openers, and access solutions built to stand out.</p>
+    <a href="#contact" class="btn">Get a Quote</a>
   </div>
 
-  <div style="margin-top:20px; font-weight:bold;">
-    ✔ Licensed & Insured ✔ Custom Built ✔ Fast Installation
+  <div class="door-card">
+    <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=1100&q=80" />
   </div>
 </section>
 
-<section class="section">
+<section id="work" class="section">
   <h2>Door Styles</h2>
   <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=1200&q=80" />
     <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" />
+    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" />
   </div>
 </section>
 
-<section class="section">
+<section id="services" class="section">
   <h2>Services</h2>
-
   <div class="service-card">
     <h3>Custom Garage Doors</h3>
     <p>Modern and custom doors built to match your home.</p>
   </div>
-
   <div class="service-card">
     <h3>Gates & Entry Systems</h3>
     <p>Secure and stylish gate solutions.</p>
   </div>
-
   <div class="service-card">
     <h3>Openers & Repairs</h3>
     <p>Reliable openers and repairs.</p>
   </div>
 </section>
 
-<section class="section">
-  <h2>Before & After</h2>
-
-  <div style="display:flex; gap:20px;">
-    <div>
-      <h3>Before</h3>
-      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" />
-    </div>
-
-    <div>
-      <h3>After</h3>
-      <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=800&q=80" />
-    </div>
-  </div>
-</section>
-
 <section id="contact" class="section">
-  <h2>Get a Free Quote Today</h2>
-  <p>Call or email us for a fast estimate.</p>
-
+  <h2>Get a Free Quote</h2>
   <a href="tel:+12095551234" class="btn">Call Now</a>
   <a href="mailto:custom@axspro.org" class="btn">Email Us</a>
-
-  <p style="margin-top:20px;">
-    AccessPro Solutions • Central Valley, CA
-  </p>
 </section>
 
 </body>
