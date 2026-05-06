@@ -470,13 +470,35 @@
         letter-spacing: -3px;
       }
     }
+    .hero-logo-mark {
+  position: absolute;
+  right: 2vw;
+  top: 18%;
+  width: min(420px, 42vw);
+  opacity: 0.16;
+  z-index: 0;
+  filter: drop-shadow(0 0 25px rgba(246,196,0,0.25));
+}
+
+.hero-visual {
+  z-index: 2;
+}
+
+@media (max-width: 980px) {
+  .hero-logo-mark {
+    right: -40px;
+    top: 120px;
+    width: 300px;
+    opacity: 0.10;
+  }
+}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="brand logo-brand">
       <!-- Replace accesspro-logo.png with your uploaded logo file when you add it to GitHub -->
-      <img src="accesspro-logo-transparent.png" alt="AccessPro Solutions logo" />
+      <img src="accesspro-logo-trans.png" alt="AccessPro Solutions logo" />
       <span>ACCESSPRO SOLUTIONS</span>
     </div>
     <nav>
@@ -489,11 +511,12 @@
 
   <main>
     <section class="hero">
+      <img class="hero-logo-mark" src="accesspro-logo-trans.png" alt="AccessPro Solutions logo mark" />
       <div class="hero-copy">
         <div class="eyebrow">Custom Doors • Gates • Openers • Solutions</div>
         <h1>
-  Custom Garage Doors
-  <span class="yellow">Built To Stand Out.</span>
+  Bull Strong
+  <span class="yellow">Built Custom.</span>
 </h1>
         <p>
   Custom garage doors, gates, openers, and access solutions built for durability,
