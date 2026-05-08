@@ -618,16 +618,29 @@
   transform: translateY(-50%);
   width: min(720px, 65vw);
   opacity: 0.10;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 25px rgba(246,196,0,0.20));
 }
 
 main,
-section,
-.topbar {
+section {
   position: relative;
-  z-index: 2;
+}
+
+.topbar {
+  position: fixed;
+  z-index: 99;
+}
+
+.hero-copy,
+.hero-visual,
+.split,
+.service-grid,
+.contact .reveal,
+.scroll-band {
+  position: relative;
+  z-index: 3;
 }
 
 @media (max-width: 768px) {
@@ -657,7 +670,6 @@ section,
   <main>
     <img class="site-bg-logo" src="assets/images/accesspro-logo-trans.png" alt="">
     <section class="hero">
-      <img class="hero-logo-mark" src="accesspro-logo-trans.png" alt="AccessPro Solutions logo mark" />
       <div class="hero-copy">
         <div class="eyebrow">Custom Doors • Gates • Openers • Solutions</div>
         <h1>
