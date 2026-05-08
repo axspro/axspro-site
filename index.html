@@ -618,10 +618,14 @@
   transform: translateY(-50%);
   width: min(760px, 70vw);
   opacity: 0.13;
-  z-index: 5;
+  z-index: 1;
   pointer-events: none;
   filter: drop-shadow(0 0 25px rgba(246,196,0,0.20));
 }
+   body > *:not(.site-bg-logo) {
+  position: relative;
+  z-index: 2;
+} 
 .topbar {
   z-index: 99;
 }
@@ -665,6 +669,7 @@ section {
   </style>
 </head>
 <body>
+  <img class="site-bg-logo" src="assets/images/accesspro-logo-trans.png" alt="">
   <header class="topbar">
     <div class="brand logo-brand">
       <!-- Replace accesspro-logo.png with your uploaded logo file when you add it to GitHub -->
@@ -680,7 +685,6 @@ section {
   </header>
 
   <main>
-    <img class="site-bg-logo" src="assets/images/accesspro-logo-trans.png" alt="">
     <section class="hero">
       <div class="hero-copy">
         <div class="eyebrow">Custom Doors • Gates • Openers • Solutions</div>
